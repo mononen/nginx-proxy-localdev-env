@@ -23,6 +23,7 @@ services:
     volumes:
       - ./certs:/etc/nginx/certs
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx-conf/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
     restart: unless-stopped
 
   phpadmin:
